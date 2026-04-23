@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <LangVersion>13.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <PackageId>Dark.Ntfy</PackageId>
+        <Authors>Markus Rodler</Authors>
+        <Company>Dark</Company>
+        <PackageDescription>This package helps sending notifications to the Ntfy service</PackageDescription>
+        <RepositoryUrl>https://github.com/MarkusRodler/Dark.Ntfy</RepositoryUrl>
+        <IsTrimmable>true</IsTrimmable>
+        <IsAotCompatible>true</IsAotCompatible>
+    </PropertyGroup>
+
+    <Target Name="PostClean" AfterTargets="Clean">
+        <RemoveDir Directories="$(BaseOutputPath)" /><!-- bin -->
+        <RemoveDir Directories="$(BaseIntermediateOutputPath)" /><!-- obj -->
+    </Target>
+
+</Project>
